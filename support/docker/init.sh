@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+cd "$(dirname "$0")"
+
 uid=$(id -u)
 gid=$(id -g)
 
