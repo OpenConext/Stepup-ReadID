@@ -1,0 +1,26 @@
+parameters:
+    # All locales supported by the application
+    locales:  'nl_NL', 'en_GB'
+
+    # SAML configuration
+    saml_idp_publickey: './config/cert.pem'
+    saml_idp_privatekey: './config/key.pem'
+    # NOTE: same key used for metadata and response/assertion signing
+    saml_metadata_publickey: './config/cert.pem'
+    saml_metadata_privatekey: './config/key.pem'
+
+    saml_remote_sp_entity_id: 'https://selfservice.stepup.example.com/rv/metadata'
+    saml_remote_sp_certificate: './config/remote_vetting_sp.crt'
+    saml_remote_sp_acs: 'https://selfservice.stepup.example.com/second-factor/acs'
+
+    # View parameters
+    support_url:
+        nl_NL: "https://wiki.surfnet.nl/"
+        en_GB: "https://wiki.surfnet.nl/"
+
+    support_email: support@example.com
+
+    user_display_name: develop
+
+    # TODO: Take logo from environment. Use same mechanism as selfservice, RA etc.
+    readid_logo: '/images/header-logo.png'
